@@ -1,0 +1,11 @@
+<h1><%= @lists.item %></h1>
+
+<p>Location: <%= @lists.location %></p>
+<p>Time: <%= @lists.when %></p>
+
+<p><a href="/lists/<%= @lists.id %>/edit">Edit</a></p
+<p><a href="/lists/<%= @lists.id %>"
+  data-confirm="You sure?"
+  data-method="delete"
+  rel="nofollow">Delete</a></p>
+<p><a href="/lists">Return to HitList</a></p>

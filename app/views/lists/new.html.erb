@@ -1,0 +1,20 @@
+<h1>New Item</h1>
+
+<% if @lists.errors.any? %>
+<h3>Please fix the following errors:</h3>
+<ul>
+  <% @lists.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<form action="/lists" method="post">
+  <label for="item">Item</label>
+  <input id="item" name="item" type="text" value="<%= @lists.item %>">
+  <label for="location">Location</label>
+  <input id="location" name="location" type="text" value="<%= @lists.location %>">
+  <label for="when">When</label>
+  <input id="when" name="when" type="text" value="<%= @lists.item %>">
+  <button>Create Task</button>
+</form>
